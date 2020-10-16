@@ -1,0 +1,39 @@
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head><title>Stazione meteo</title>
+    <META CONTENT="150; url=meteofarlocco.tk" HTTP-EQUIV="Refresh">
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+    <style>html {
+        font-family: 'Open Sans', sans-serif;
+        display: block;
+        margin: 0px auto;
+        color: #444444;
+    }
+
+    body {
+        margin-top: 50px;
+    }
+
+    h1 {
+        color: #444444;
+        margin: 50px auto 30px;
+    }
+
+    p {
+        font-size: 24px;
+        color: #444444;
+        margin-bottom: 10px;
+    }</style>
+</head>
+<body>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<div id="webpage">
+    <h1 align=center>Meteo farlocco</h1>
+    <p th:text="${'&#x1f4a7 Umidità: ' + humidity + '%'}" />
+    <p th:text="${'&#x1f321 Temperatura: ' + temperature + '°C'}" />
+    <p th:text="${'&#x1f321 Temperatura percepita: ' + heatIndex + '°C'}" />
+    <p th:text="${'&#x1f4a6 Punto di rugiada (dew point): ' + dewPoint + '°C (Potrebbe esserci un errore nella formula, non fidatevi. Se non funziona prendetevela con Wikipedia)'}" />
+    <p th:text="${'&#x1f701 L''aria viene percepita come ' + howAirFeels + ' (Idem come sopra)'}">
+    <p th:text="${'&#x1f550 Ultimo aggiornamento: ' + lastUpdateTimestamp}">
+</div>
+</body>
+</html>
