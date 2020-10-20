@@ -1,9 +1,11 @@
 package tk.gtpware.smarthomehubspring;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class WeatherStationData {
-    String deviceID;    //useless for now, but might be useful in case I decide to have more stations
-    float temperature;
-    float humidity;
-    float heatIndex;
-    String lastUpdateTimestamp;
+    @JsonProperty("deviceID") String deviceID;    //useless for now, but might be useful in case I decide to have more stations
+    @JsonProperty("temperature") float temperature;
+    @JsonProperty("humidity") float humidity;
+    @JsonProperty("heatIndex") float heatIndex;
+    @JsonProperty("lastUpdateTimestamp") String lastUpdateTimestamp;
 }
