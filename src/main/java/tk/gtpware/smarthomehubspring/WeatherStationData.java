@@ -7,5 +7,5 @@ public class WeatherStationData {
     @JsonProperty("temperature") float temperature;
     @JsonProperty("humidity") float humidity;
     @JsonProperty("heatIndex") float heatIndex;
-    @JsonProperty("lastUpdateTimestamp") String lastUpdateTimestamp;
+    @JsonProperty("timestamp") String lastUpdateTimestamp;
 }
